@@ -10,30 +10,29 @@
 
 <body>
     <div class="container">
-        <div class="main_screen_container">
-            <div class="user_input_container">
-                <div class="dob_tile">Nacimiento</div>
-                <input id="date" type="date" name="dob">
+        <div class="user_input_container">
+            <div class="dob_tile">Nacimiento</div>
+            <input id="date" type="date" name="dob">
+        </div>
+        <div class="user_input_container">
+            <div class="date_tile">Fecha actual</div>
+            <input id="today_date" type="date" name="dob" disabled>
+        </div>
+        <button class="btn" onclick="ageCalculate()">Calcular</button>
+        <div class="age_main_big_container">
+            <div class="left_side_div_age_list">
+                <div>Edad</div>
+                <div><b id="year">_</b> Años</div>
+                <div id="m_d"><b id="month">_</b> Meses | <b id="day">_</b> Días</div>
             </div>
-            <div class="user_input_container">
-                <div class="date_tile">Fecha actual</div>
-                <input id="today_date" type="date" name="dob" disabled>
-            </div>
-            <button class="btn" onclick="ageCalculate()">Calcular</button>
-            <div class="age_main_big_container">
-                <div class="left_side_div_age_list">
-                    <div>Edad</div>
-                    <div><b id="year">_</b> Años</div>
-                    <div id="m_d"><b id="month">_</b> Meses | <b id="day">_</b> Días</div>
-                </div>
-                <div class="right_side_div_age_list">
-                    <div>Próximo Cumpleaños</div>
-                    <img src="https://i.pinimg.com/originals/ce/e2/85/cee2854c1ca3a12fe2655f3376b5c110.gif">
-                    <div id="n_b"><b id="month1">__</b> Meses | <b id="day1">__</b> Días</div>
-                </div>
+            <div class="right_side_div_age_list">
+                <div>Próximo Cumpleaños</div>
+                <img src="./images/cake.gif">
+                <div id="n_b"><b id="month1">__</b> Meses | <b id="day1">__</b> Días</div>
             </div>
         </div>
     </div>
+    
     <script type="text/javascript" src="script.js"></script>
 </body>
 
