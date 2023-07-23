@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculador de edad 🎂</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+    />
 </head>
 
 <body>
@@ -20,17 +36,20 @@
         </div>
         <button class="btn" onclick="ageCalculate()">Calcular</button>
         <div>
-            <span class="close">&times;</span>
+            
             <div class="age_main_big_container">
-                <div class="left_side_div_age_list">
-                    <div>Edad</div>
-                    <div><b id="year">_</b> Años</div>
-                    <div id="m_d"><b id="month">_</b> Meses | <b id="day">_</b> Días</div>
-                </div>
-                <div class="right_side_div_age_list">
-                    <div>Próximo Cumpleaños</div>
-                    <img src="./images/cake.gif">
-                    <div id="n_b"><b id="month1">__</b> Meses | <b id="day1">__</b> Días</div>
+                <span class="close">&times;</span>
+                <div class="flex">
+                    <div class="left_side_div_age_list">
+                        <div>Edad</div>
+                        <div><b id="year">_</b> Años</div>
+                        <div id="m_d"><b id="month">_</b> Meses | <b id="day">_</b> Días</div>
+                    </div>
+                    <div class="right_side_div_age_list">
+                        <div>Próximo Cumpleaños</div>
+                        <img src="./images/cake.gif">
+                        <div id="n_b"><b id="month1">__</b> Meses | <b id="day1">__</b> Días</div>
+                    </div>
                 </div>
             </div>
         </div>
