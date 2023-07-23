@@ -102,3 +102,4 @@ window.onclick = function (event) {
         closeModal();
     }
 }
+
