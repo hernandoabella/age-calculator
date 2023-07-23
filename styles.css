@@ -69,19 +69,6 @@ body {
     background: rgb(255, 0, 162);
     z-index: 1;
     padding: 20px;
-    display: flex;
-}
-
-.left_side_div_age_list,
-.right_side_div_age_list {
-    width: 49.1%;
-    height: 100%;
-    color: #fff;
-    border: 1px solid #ff4e00;
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: top;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .left_side_div_age_list div:nth-child(1) {
@@ -95,21 +82,6 @@ body {
 
 .left_side_div_age_list div:nth-child(3) {
     margin: 20px 4px;
-    opacity: 0;
-    transition: all 0.2s;
-}
-
-.right_side_div_age_list {
-    text-align: center;
-}
-
-.right_side_div_age_list div:nth-child(1) {
-    color: #ff4e00;
-    padding: 10px 0;
-}
-
-.right_side_div_age_list #n_b {
-    margin-top: 26px;
     opacity: 0;
     transition: all 0.2s;
 }
@@ -128,4 +100,8 @@ body {
 .close {
     font-size: 2em;
     font-weight: bold;
+}
+
+.flex {
+    display: flex;
 }
