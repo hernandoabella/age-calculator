@@ -4,9 +4,11 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         const selectedDiv2 = document.getElementById('day');
         const selectedDiv3 = document.getElementById('month1');
         const selectedDiv4 = document.getElementById('day1');
+        const selectedDiv5 = document.getElementById('hours');
+        const selectedDiv6 = document.getElementById('minutes');
+        const selectedDiv7 = document.getElementById('seconds');
         const op = document.getElementById('m_d');
         const op1 = document.getElementById('n_b');
-        const countdownDiv = document.querySelector(".right_side_div_age_list");
 
         let currentYear = new Date().getFullYear();
         let currentMonth = new Date().getMonth() + 1;
@@ -54,10 +56,10 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
             const seconds = Math.floor((timeLeft % oneMinute) / oneSecond);
 
             // Mostrar los valores de la cuenta regresiva en los elementos HTML
-            document.getElementById('day1').innerText = days;
-            document.getElementById('horas').innerText = hours;
-            document.getElementById('minutos').innerText = minutes;
-            document.getElementById('segundos').innerText = seconds;
+            selectedDiv4.innerText = days;
+            selectedDiv5.innerText = hours;
+            selectedDiv6.innerText = minutes;
+            selectedDiv7.innerText = seconds;
         }
 
         // Función para calcular la edad a partir de la fecha de nacimiento ingresada
@@ -71,7 +73,7 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
             if (myBirth != "") {
                 let inputDate = new Date(myBirth);
                 let birthMonth, birthDate, birthYear;
-                birthDetails = { date: inputDate.getDate(), month: inputDate.getMonth() + 1, year: inputDate.getFullYear() }
+                let birthDetails = { date: inputDate.getDate(), month: inputDate.getMonth() + 1, year: inputDate.getFullYear() }
 
                 if (currentYear % 4 === 0 || (currentYear % 100 === 0 && currentYear % 400 === 0)) {
                     months[1] = 29;
@@ -102,8 +104,6 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                 selectedDiv.innerText = birthYear;
                 selectedDiv1.innerText = birthMonth;
                 selectedDiv2.innerText = birthDate;
-                selectedDiv3.innerText = 11 - birthMonth;
-                selectedDiv4.innerText = months[currentMonth] - birthDate;
                 op.style.opacity = '1';
                 op1.style.opacity = '1';
 
@@ -117,7 +117,7 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
                 calculateCountdown(nextBirthday);
 
                 // Llamar a la función para mostrar el modal y pasar los valores calculados como argumentos
-                showModal(birthYear, birthMonth, birthDate, 11 - birthMonth, months[currentMonth] - birthDate);
+                showModal(birthYear, birthMonth, birthDate, birthMonth === 0 ? 11 : 12 - birthMonth, months[currentMonth] - birthDate);
 
                 // Actualizar la cuenta regresiva cada segundo
                 setInterval(function () {
